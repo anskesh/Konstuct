@@ -426,3 +426,7 @@ div.link__menu {
 .contacts__network {
   margin-top: 20px;
 }
+
+.contacts__network img {
+  margin-right: 5px;
+}
