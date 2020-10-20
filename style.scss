@@ -21,7 +21,6 @@ body {
     }
     color: white;
     background-image: url('../img/bg.png');
-    background-repeat: contain;
     background-size: cover;
     .header__logo {
         padding-top: 41px;
@@ -33,6 +32,7 @@ body {
     }
     .header__content {
         .header__title {
+            text-align: center;
             letter-spacing: 5.70937px;
             margin: 0 0;
             font-size: 60px;
@@ -102,6 +102,7 @@ body {
         .our-story__content{
             margin-top: 92px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
         }
@@ -202,8 +203,8 @@ body {
 }
 .whatbuild {
     background-image: url('../img/bgwantbuild.png');
-    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     .whatbuild__content {
         display: flex;
         justify-content: center;
@@ -244,12 +245,14 @@ body {
 }
 .footer {
     font-size: 11px;
+    background-size: cover;
     background-color: $dark;
     color: white;
     .contacts {
+        flex-wrap: wrap;
         padding-top: 42px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         .contacts__company {
             width: 35%;
             display: flex;
@@ -318,4 +321,38 @@ div.link__menu {
     img {
         margin-right: 5px;
     }
+}
+
+@media (max-width: 950px) {
+body {
+    max-width: 950px;
+}
+.footer {
+    max-width: 950px;
+}
+.wrapper {
+    max-width: 80%;
+}
+.our-story__content {
+    flex-direction: column;
+}
+.our-capabilities__nav {
+    flex-wrap: wrap;
+}
+.our-capabilities__blocks {
+    flex-wrap: wrap;
+    justify-content: space-around !important;
+}
+div.our-story__description {
+    width: 100% !important;
+    margin-bottom: 60px !important;
+}
+}
+@media (max-width:730px) {
+.navbar__menu {
+    display: none !important;
+}
+.navbar__logo {
+    margin: 20px 0 20px 0;
+}
 }
